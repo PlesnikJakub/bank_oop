@@ -2,6 +2,7 @@
 #include <string>
 #include "Client.h"
 #include "Account.h"
+#include "PartnerAccount.h"
 #pragma once
 using namespace std;
 
@@ -18,6 +19,6 @@ public:
     Client* CreateClient(int c, string n);
     Account* CreateAccount(int n, Client* c);
     Account* CreateAccount(int n, Client* c, double ir);
-    Account* CreateAccount(int n, Client* c, Client* p);
-    Account* CreateAccount(int n, Client* c, Client* p, double ir);
+    PartnerAccount* CreatePartnerAccount(int n, Client* c, Client* p);
+    PartnerAccount* CreatePartnerAccount(int n, Client* c, Client* p, double ir);
 };

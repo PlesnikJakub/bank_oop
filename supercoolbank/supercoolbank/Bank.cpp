@@ -32,9 +32,10 @@ Account* Bank::CreateAccount(int n, Client* c) {
     return account;
 }
 
-Account* Bank::CreateAccount(int n, Client* c, Client* p) {
-    this->accounts[this->accountsCount] = new Account(n, c, p);
-    this->accounts++;
-    return this->accounts[this->accountsCount];
+PartnerAccount* Bank::CreatePartnerAccount(int n, Client* c, Client* p) {
+    return new PartnerAccount(n, c, p);
+    /* this->accounts++;
+    return (PartnerAccount*)this->accounts[this->accountsCount];
+    */
 }
 

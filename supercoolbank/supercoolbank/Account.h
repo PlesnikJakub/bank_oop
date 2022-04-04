@@ -8,20 +8,21 @@ class Account {
 private:
     int number;
     double balance;
-    static double interestRate;
+    double interestRate;
+    double static defaultInterestRate;
 
     Client* owner;
-    Client* partner;
 public:
     Account(int n, Client* c);
-    Account(int n, Client* c, Client* r);
+    Account(int n, Client* c, double ir);
     int GetNumber();
     double GetBalance();
     double GetInterestRate();
     Client* GetOwner();
-    Client* GetPartner();
     bool CanWithdraw(double a);
-    static void SetInterestRate(double value);
     void Deposit(double a);
     bool Withdraw(double a);
+
+    static void SetDefaultInterestRate(double value);
+    static double GetDefaultInterestRate();
 };
