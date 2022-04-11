@@ -2,6 +2,7 @@
 #include "Bank.h"
 #include "Account.h"
 #include "Client.h"
+#include "CreditAccount.h"
 
 int main()
 {
@@ -16,6 +17,21 @@ int main()
 
     personal->Deposit(2000.0);
     cout << personal->GetBalance() << endl;
+    personal->Withdraw(1000.0);
+
+
+    /* -------------------------- */
+
+    CreditAccount* creditAcc = new CreditAccount(1, john, 10000);
+    cout << creditAcc->GetBalance() << endl;
+    creditAcc->Withdraw(1000.0);
+    creditAcc->Deposit(2000.0);
+    cout << creditAcc->GetBalance() << endl;
+    creditAcc->Withdraw(1000.0);
+
+    /* TEST */
+    Account* b = creditAcc;
+    b->Withdraw(1000.0);
 
     return 0;
 }

@@ -1,4 +1,6 @@
 #include "Account.h"
+#include <iostream>
+
 double Account::defaultInterestRate = 3.14;
 
 Account::Account(int n, Client* c) {
@@ -36,8 +38,10 @@ void Account::Deposit(double a) {
     this->balance = this->balance + a;
 }
 bool Account::Withdraw(double a) {
-    if (CanWithdraw(a)) {
+    cout << "Account Withdraw" << endl;
+    if (this->CanWithdraw(a)) {
         this->balance -= a;
+        return true;
     }
     return false;
 }

@@ -7,11 +7,13 @@ using namespace std;
 class Account {
 private:
     int number;
-    double balance;
     double interestRate;
     double static defaultInterestRate;
-
     Client* owner;
+
+protected:
+    double balance;
+
 public:
     Account(int n, Client* c);
     Account(int n, Client* c, double ir);
