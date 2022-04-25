@@ -21,9 +21,9 @@ public:
     double GetBalance();
     double GetInterestRate();
     Client* GetOwner();
-    bool CanWithdraw(double a);
     void Deposit(double a);
-    bool Withdraw(double a);
+    virtual bool CanWithdraw(double a);
+    virtual bool Withdraw(double a);
 
     static void SetDefaultInterestRate(double value);
     static double GetDefaultInterestRate();

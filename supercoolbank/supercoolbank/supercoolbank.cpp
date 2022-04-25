@@ -26,6 +26,7 @@ int main()
     cout << creditAcc->GetBalance() << endl;
     creditAcc->Withdraw(1000.0);
     creditAcc->Deposit(2000.0);
+
     cout << creditAcc->GetBalance() << endl;
     creditAcc->Withdraw(1000.0);
 
